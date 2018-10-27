@@ -1,0 +1,21 @@
+"use strict";
+var age = 18;
+var stature = 185.5;
+var berial = 'berialyue';
+var v = true;
+var REN;
+(function (REN) {
+    REN["nan"] = "\u7537";
+    REN["nv"] = "\u5973";
+    REN["yao"] = "\u5996";
+})(REN || (REN = {}));
+var t = 10;
+console.log(t);
+t = 'berialyue';
+console.log(t);
+t = true;
+console.log(t);
+console.log(age);
+console.log(stature);
+console.log(berial);
+console.log(REN.yao);
