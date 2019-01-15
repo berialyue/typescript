@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var age = 18;
 var stature = 185.5;
 var berial = 'berialyue';

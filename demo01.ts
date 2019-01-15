@@ -15,3 +15,5 @@ console.log(age)
 console.log(stature)
 console.log(berial)
 console.log(REN.yao)
+
+export {}
