@@ -1,0 +1,15 @@
+"use strict";
+var d = new Date();
+console.log(d);
+var d1 = new Date(1000);
+var d2 = new Date(2000);
+console.log(d1);
+console.log(d2);
+var d3 = new Date('2018/09/06 05:30:00');
+var d4 = new Date('2018-09-06 05:30:00');
+var d5 = new Date('2018-09-06T05:30:00');
+console.log(d3);
+console.log(d4);
+console.log(d5);
+var dd = new Date(2018, 2, 27, 23, 55, 35, 123);
+console.log(dd);
