@@ -1,0 +1,13 @@
+"use strict";
+var reg1 = new RegExp('berial');
+console.log(reg1);
+var reg2 = new RegExp('berialyue', 'gi');
+console.log(reg2);
+var reg3 = /berial/;
+var reg4 = /berialyue/gi;
+console.log(reg3);
+console.log(reg4);
+var reg5 = /pudding/i;
+var website = 'pudding.design';
+console.log(reg1.test(website));
+console.log(reg1.exec(website));
