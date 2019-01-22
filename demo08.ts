@@ -14,5 +14,5 @@ console.log(reg4)
 let reg5:RegExp = /pudding/i
 let website:string = 'pudding.design'
 
-console.log(reg1.test(website))
-console.log(reg1.exec(website))
+console.log(reg5.test(website))
+console.log(reg5.exec(website))

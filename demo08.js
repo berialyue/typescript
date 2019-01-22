@@ -9,5 +9,5 @@ console.log(reg3);
 console.log(reg4);
 var reg5 = /pudding/i;
 var website = 'pudding.design';
-console.log(reg1.test(website));
-console.log(reg1.exec(website));
+console.log(reg5.test(website));
+console.log(reg5.exec(website));
