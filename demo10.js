@@ -19,3 +19,11 @@ console.log(jiejie2.name);
 console.log(jiejie2.age);
 jiejie2.sayHello();
 jiejie2.sayLove();
+var Man = /** @class */ (function () {
+    function Man() {
+        this.sex = '男';
+    }
+    return Man;
+}());
+var man = new Man();
+man.sex = '女';
