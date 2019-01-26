@@ -33,7 +33,7 @@ var Pudding = /** @class */ (function (_super) {
         return _this;
     }
     Pudding.prototype.interest = function () {
-        // super.interest()
+        _super.prototype.interest.call(this);
         console.log('100');
     };
     Pudding.prototype.zhuanQian = function () {
