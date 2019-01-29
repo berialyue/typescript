@@ -40,6 +40,19 @@ let num1: number = u1;
 let u2:void
 let num2:number = u2
 
+let myFavoriteNumber:any = 'seven'
+myFavoriteNumber = 7
+
+let anyThing:any = 'hello'
+console.log(anyThing.myName)
+console.log(anyThing.myName.firstName)
+
+anyThing.setName('jerry')
+anyThing.setName('jerry').sayHello()
+anyThing.myName.setFirstName('cat')
+
+console.log(anyThing)
+
 
 
 
