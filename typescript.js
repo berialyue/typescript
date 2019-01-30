@@ -28,6 +28,7 @@ var u1;
 var num1 = u1;
 var u2;
 var num2 = u2;
+//类型推论
 var myFavoriteNumber = 'seven';
 myFavoriteNumber = 7;
 var anyThing = 'hello';
@@ -37,3 +38,27 @@ anyThing.setName('jerry');
 anyThing.setName('jerry').sayHello();
 anyThing.myName.setFirstName('cat');
 console.log(anyThing);
+//类型推论
+var myFavoriteNumber1 = 'seven';
+// myFavoriteNumber1 = 7
+// 如果没有明确指定类型，ts会推测出一个类型
+//联合类型
+var myFavoriteNumber2;
+myFavoriteNumber2 = 'seven';
+myFavoriteNumber2 = 7;
+// let myFavoriteNumber3:string | number
+// myFavoriteNumber3 = true
+// length不是string和number的共有属性，所以会报错
+// function getLegth(something:string | number):number {
+//   return something.length
+// }
+function getString(something) {
+    return something.toString();
+}
+// 第二行的 myFavoriteNumber 被推断成了 string，访问它的 length 属性不会报错。
+//而第四行的 myFavoriteNumber 被推断成了 number，访问它的 length 属性时就报错了。
+var myFavoriteNumber4;
+myFavoriteNumber4 = 'seven';
+console.log(myFavoriteNumber4.length);
+myFavoriteNumber4 = 7;
+// console.log(myFavoriteNumber4.length)
