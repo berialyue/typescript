@@ -32,13 +32,13 @@ let unusable:void = undefined
 let u:undefined = undefined
 let n:null = null
 
-let num:number = undefined
+// let num:number = undefined
 
-let u1: undefined;
-let num1: number = u1;
+// let u1: undefined;
+// let num1: number = u1;
 
-let u2:void
-let num2:number = u2
+// let u2:void
+// let num2:number = u2
 
 //类型推论
 let myFavoriteNumber:any = 'seven'
@@ -46,11 +46,11 @@ myFavoriteNumber = 7
 
 let anyThing:any = 'hello'
 console.log(anyThing.myName)
-console.log(anyThing.myName.firstName)
+// console.log(anyThing.myName.firstName)
 
-anyThing.setName('jerry')
-anyThing.setName('jerry').sayHello()
-anyThing.myName.setFirstName('cat')
+// anyThing.setName('jerry')
+// anyThing.setName('jerry').sayHello()
+// anyThing.myName.setFirstName('cat')
 
 console.log(anyThing)
 
@@ -86,4 +86,25 @@ console.log(myFavoriteNumber4.length)
 myFavoriteNumber4 = 7
 // console.log(myFavoriteNumber4.length)
 
+// 接口
+interface Person {
+  readonly id:number
+  name:string
+  age?:number
+  [propName:string]:any
+}
 
+let tom:Person = {
+  id:  123,
+  name:' Tom',
+  age: 25
+}
+
+let jerry:Person = {
+  id:124,
+  name:'jerry'
+}
+
+console.log(jerry.id)
+console.log(jerry.name)
+console.log(tom.age)

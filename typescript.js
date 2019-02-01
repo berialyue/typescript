@@ -23,20 +23,20 @@ function alertName() {
 var unusable = undefined;
 var u = undefined;
 var n = null;
-var num = undefined;
-var u1;
-var num1 = u1;
-var u2;
-var num2 = u2;
+// let num:number = undefined
+// let u1: undefined;
+// let num1: number = u1;
+// let u2:void
+// let num2:number = u2
 //类型推论
 var myFavoriteNumber = 'seven';
 myFavoriteNumber = 7;
 var anyThing = 'hello';
 console.log(anyThing.myName);
-console.log(anyThing.myName.firstName);
-anyThing.setName('jerry');
-anyThing.setName('jerry').sayHello();
-anyThing.myName.setFirstName('cat');
+// console.log(anyThing.myName.firstName)
+// anyThing.setName('jerry')
+// anyThing.setName('jerry').sayHello()
+// anyThing.myName.setFirstName('cat')
 console.log(anyThing);
 //类型推论
 var myFavoriteNumber1 = 'seven';
@@ -61,4 +61,15 @@ var myFavoriteNumber4;
 myFavoriteNumber4 = 'seven';
 console.log(myFavoriteNumber4.length);
 myFavoriteNumber4 = 7;
-// console.log(myFavoriteNumber4.length)
+var tom = {
+    id: 123,
+    name: ' Tom',
+    age: 25
+};
+var jerry = {
+    id: 124,
+    name: 'jerry'
+};
+console.log(jerry.id);
+console.log(jerry.name);
+console.log(tom.age);
