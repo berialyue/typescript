@@ -73,3 +73,12 @@ var jerry = {
 console.log(jerry.id);
 console.log(jerry.name);
 console.log(tom.age);
+var fibonacci = [1, 1, 2, 3, 5];
+//数组中的项不允许出现其他类型
+// let fibonacci1:number[] = [1,'1',2,3,5]
+var fibonacci2 = [1, 1, 2, 3, 5];
+var fibonacci3 = [1, 1, 2, 3, 5];
+var list = ['1', 1, 2, { number: '5' }];
+console.log(fibonacci);
+console.log(fibonacci3);
+console.log(list);

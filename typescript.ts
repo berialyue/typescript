@@ -108,3 +108,19 @@ let jerry:Person = {
 console.log(jerry.id)
 console.log(jerry.name)
 console.log(tom.age)
+
+let fibonacci:number[] = [1,1,2,3,5]
+//数组中的项不允许出现其他类型
+// let fibonacci1:number[] = [1,'1',2,3,5]
+
+let fibonacci2:Array<number> = [1,1,2,3,5]
+
+interface NumberArray {
+  [index:number]:number
+}
+let fibonacci3:NumberArray = [1,1,2,3,5]
+
+let list:any[] = ['1',1,2,{number:'5'}]
+ console.log(fibonacci)
+ console.log(fibonacci3)
+ console.log(list)
