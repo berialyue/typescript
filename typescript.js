@@ -82,3 +82,52 @@ var list = ['1', 1, 2, { number: '5' }];
 console.log(fibonacci);
 console.log(fibonacci3);
 console.log(list);
+function sum(x, y) {
+    return x + y;
+}
+var mySum = function (x, y) {
+    return x + y;
+};
+function sum1(x, y) {
+    return x + y;
+}
+var mySearch;
+mySearch = function (source, subString) {
+    return source.search(subString) !== -1;
+};
+function buildName(firstName, lastName) {
+    if (firstName === void 0) { firstName = 'tom'; }
+    if (lastName) {
+        return firstName + ' ' + lastName;
+    }
+    else {
+        return firstName;
+    }
+}
+var tomcat = buildName('Tom', 'Cat');
+var tom1 = buildName('tom');
+var tom2 = buildName();
+console.log(tomcat);
+console.log(tom1);
+console.log(tom2);
+function push(array) {
+    var items = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        items[_i - 1] = arguments[_i];
+    }
+    items.forEach(function (item) {
+        array.push(item);
+    });
+}
+var a = [];
+push(a, 1, 2, 3);
+function reverse(x) {
+    if (typeof x === 'number') {
+        return Number(x.toString().split('').reverse().join(''));
+    }
+    else if (typeof x === 'string') {
+        return x.split('').reverse().join('');
+    }
+}
+console.log(reverse(123456));
+console.log(reverse('hello'));
