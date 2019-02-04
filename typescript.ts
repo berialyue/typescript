@@ -125,13 +125,13 @@ let list:any[] = ['1',1,2,{number:'5'}]
  console.log(fibonacci3)
  console.log(list)
 
-function sum(x,y) {
-  return x + y
-}
+// function sum(x,y) {
+//   return x + y
+// }
 
-let mySum = function (x,y) {
-  return x + y
-}
+// let mySum = function (x,y) {
+//   return x + y
+// }
 
 function sum1(x:number, y:number):number {
   return x + y
@@ -168,8 +168,8 @@ function push(array:any[], ...items:any[]) {
   })
 }
 
-let a = []
-push(a,1,2,3)
+// let a = []
+// push(a,1,2,3)
 
 function reverse(x:number):number
 function reverse(x:string):string
@@ -179,6 +179,7 @@ function reverse(x:number | string): number | string {
   } else if(typeof x === 'string') {
     return x.split('').reverse().join('')
   }
+  return '请输入数字或字符串'
 }
 
 console.log(reverse(123456))
