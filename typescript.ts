@@ -184,3 +184,11 @@ function reverse(x:number | string): number | string {
 
 console.log(reverse(123456))
 console.log(reverse('hello'))
+
+function getLength(something:string | number):number {
+  if((<string>something).length) {
+    return (<string>something).length
+  } else {
+    return something.toString().length
+  }
+}
