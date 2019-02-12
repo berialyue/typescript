@@ -221,3 +221,13 @@ function getName(n:NameOrResolver):Name {
     return n()
   }
 }
+
+// 字符串字面量类型
+type EventNames = 'click' | 'scroll' | 'mousemove'
+function handleEvent(ele:HTMLElement | null, event:EventNames) {
+  //do something
+}
+
+handleEvent(document.getElementById('hello'),'scroll')
+handleEvent(document.getElementById('world'),'dbclick')
+
