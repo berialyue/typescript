@@ -229,5 +229,17 @@ function handleEvent(ele:HTMLElement | null, event:EventNames) {
 }
 
 handleEvent(document.getElementById('hello'),'scroll')
-handleEvent(document.getElementById('world'),'dbclick')
+// handleEvent(document.getElementById('world'),'dbclick')
+
+// 元祖
+let xcatliu:[string,number] = ['Xcat liu',25]
+
+let berial:[string,number];
+berial[0] = 'berialyue';
+berial[1] = 25;
+
+berial[0].slice(1);
+berial[1].toFixed(2);
+
+console.log(berial)
 

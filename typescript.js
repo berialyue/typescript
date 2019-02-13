@@ -82,12 +82,12 @@ var list = ['1', 1, 2, { number: '5' }];
 console.log(fibonacci);
 console.log(fibonacci3);
 console.log(list);
-function sum(x, y) {
-    return x + y;
-}
-var mySum = function (x, y) {
-    return x + y;
-};
+// function sum(x,y) {
+//   return x + y
+// }
+// let mySum = function (x,y) {
+//   return x + y
+// }
 function sum1(x, y) {
     return x + y;
 }
@@ -119,8 +119,6 @@ function push(array) {
         array.push(item);
     });
 }
-var a = [];
-push(a, 1, 2, 3);
 function reverse(x) {
     if (typeof x === 'number') {
         return Number(x.toString().split('').reverse().join(''));
@@ -128,6 +126,47 @@ function reverse(x) {
     else if (typeof x === 'string') {
         return x.split('').reverse().join('');
     }
+    return '请输入数字或字符串';
 }
 console.log(reverse(123456));
 console.log(reverse('hello'));
+function getLength(something) {
+    if (something.length) {
+        return something.length;
+    }
+    else {
+        return something.toString().length;
+    }
+}
+jQuery('#foo');
+// 内置对象
+var b = new Boolean(1);
+var e = new Error('error');
+var d = new Date();
+var r = /[a-z]/;
+var body = document.body;
+var allDiv = document.querySelectorAll('div');
+document.addEventListener('click', function (e) {
+    // do something
+});
+function getName(n) {
+    if (typeof n === 'string') {
+        return n;
+    }
+    else {
+        return n();
+    }
+}
+function handleEvent(ele, event) {
+    //do something
+}
+handleEvent(document.getElementById('hello'), 'scroll');
+// handleEvent(document.getElementById('world'),'dbclick')
+// 元祖
+var xcatliu = ['Xcat liu', 25];
+var berial;
+berial[0] = 'berialyue';
+berial[1] = 25;
+berial[0].slice(1);
+berial[1].toFixed(2);
+console.log(berial);
