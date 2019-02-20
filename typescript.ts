@@ -260,3 +260,17 @@ console.log(Days["Sun"] === 7); // true
 console.log(Days["Mon"] === 1); // true
 console.log(Days["Tue"] === 2); // true
 console.log(Days["Sat"] === 6); // true
+
+// 类
+class Animal {
+  name = 'Jack'
+  constructor(name:any) {
+    this.name = name
+  }
+  sayHi() {
+    return  `My Name is ${this.name}`
+  }
+}
+
+let a = new Animal('Jack')
+console.log(a.sayHi())
