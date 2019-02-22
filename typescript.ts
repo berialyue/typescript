@@ -275,6 +275,7 @@ class Animal {
 let a = new Animal('Jack')
 console.log(a.sayHi())
 
+// 类的继承
 class Cat extends Animal{
   constructor(name:any) {
     super(name)
@@ -287,3 +288,20 @@ class Cat extends Animal{
 
 let cat = new Cat('Tom')
 console.log(cat.sayHi())
+
+// 存取器
+class Animal1 {
+  constructor(name:any) {
+    this.name = name
+  }
+  get name() {
+    return 'Jack'
+  }
+  set name(value) {
+    console.log('setter' + value)
+  }
+}
+
+let newA = new Animal1('Kitty')
+newA.name = 'Tom'
+console.log(newA.name)
