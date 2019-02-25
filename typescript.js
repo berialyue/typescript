@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var isDone = false;
 // 使用构造函数 Boolean 创建的对象不是布尔值
 // let createdByNewBoolen:boolean = new Boolean(1)
@@ -138,7 +151,7 @@ function getLength(something) {
         return something.toString().length;
     }
 }
-jQuery('#foo');
+// jQuery('#foo')
 // 内置对象
 var b = new Boolean(1);
 var e = new Error('error');
@@ -164,12 +177,12 @@ handleEvent(document.getElementById('hello'), 'scroll');
 // handleEvent(document.getElementById('world'),'dbclick')
 // 元祖
 var xcatliu = ['Xcat liu', 25];
-var berial;
-berial[0] = 'berialyue';
-berial[1] = 25;
-berial[0].slice(1);
-berial[1].toFixed(2);
-console.log(berial);
+// let berial:[string,number];
+// berial[0] = 'berialyue';
+// berial[1] = 25;
+// berial[0].slice(1);
+// berial[1].toFixed(2);
+// console.log(berial)
 // 枚举
 var Days;
 (function (Days) {
@@ -196,6 +209,7 @@ console.log(Days["Sat"] === 6); // true
 // 类
 var Animal = /** @class */ (function () {
     function Animal(name) {
+        this.name = 'Jack';
         this.name = name;
     }
     Animal.prototype.sayHi = function () {
@@ -205,3 +219,52 @@ var Animal = /** @class */ (function () {
 }());
 var a = new Animal('Jack');
 console.log(a.sayHi());
+// 类的继承
+var Cat = /** @class */ (function (_super) {
+    __extends(Cat, _super);
+    function Cat(name) {
+        var _this = _super.call(this, name) || this;
+        console.log(_this.name);
+        return _this;
+    }
+    Cat.prototype.sayHi = function () {
+        return 'Meow, ' + _super.prototype.sayHi.call(this);
+    };
+    return Cat;
+}(Animal));
+var cat = new Cat('Tom');
+console.log(cat.sayHi());
+// 存取器
+var Animal1 = /** @class */ (function () {
+    function Animal1(name) {
+        this.name = name;
+    }
+    Object.defineProperty(Animal1.prototype, "name", {
+        get: function () {
+            return 'Jack';
+        },
+        set: function (value) {
+            console.log('setter' + value);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Animal1;
+}());
+var newA = new Animal1('Kitty');
+newA.name = 'Tom';
+console.log(newA.name);
+// 静态方法
+var Animal2 = /** @class */ (function () {
+    function Animal2(name) {
+        this.name = '';
+        this.name = name;
+    }
+    Animal2.isAnimal = function (a) {
+        return a instanceof Animal2;
+    };
+    return Animal2;
+}());
+var aa = new Animal1('Jack');
+aa.name = 'Tom';
+console.log(aa.name);

@@ -196,7 +196,7 @@ function getLength(something:string | number):number {
 // 声明文件
 declare var jQuery:(selector:string) => any
 
-jQuery('#foo')
+// jQuery('#foo')
 
 // 内置对象
 let b:Boolean = new Boolean(1)
@@ -305,3 +305,18 @@ class Animal1 {
 let newA = new Animal1('Kitty')
 newA.name = 'Tom'
 console.log(newA.name)
+
+// 静态方法
+class Animal2 {
+  name = ''
+  constructor(name:any) {
+    this.name = name
+  }
+  static isAnimal(a:any) {
+    return a instanceof Animal2
+  }
+}
+
+let aa = new Animal1('Jack')
+aa.name = 'Tom'
+console.log(aa.name)
