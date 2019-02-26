@@ -320,3 +320,16 @@ class Animal2 {
 let aa = new Animal1('Jack')
 aa.name = 'Tom'
 console.log(aa.name)
+
+// public
+class Animal3 {
+  public name:any
+  public constructor(name:any) {
+    this.name = name
+  }
+}
+
+let aaa = new Animal3('Jack')
+console.log(aaa.name)
+aaa.name = 'Tom'
+console.log(aaa.name)
