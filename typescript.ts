@@ -333,3 +333,15 @@ let aaa = new Animal3('Jack')
 console.log(aaa.name)
 aaa.name = 'Tom'
 console.log(aaa.name)
+
+// private
+class Animal4 {
+  private name:any
+  public constructor(name:any) {
+    this.name = name
+  }
+}
+
+let a4 = new Animal4('Jack')
+// console.log(a4.name)
+// a.name = 'Tom'
