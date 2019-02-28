@@ -345,3 +345,20 @@ class Animal4 {
 let a4 = new Animal4('Jack')
 // console.log(a4.name)
 // a.name = 'Tom'
+
+// 抽象类
+abstract class Animal5 {
+  public name:any
+  public constructor(name:any) {
+    this.name = name
+  }
+  public abstract sayHi():any
+}
+
+class Cat5 extends Animal5 {
+  public sayHi() {
+    console.log(`Meow, My name is ${this.name}`)
+  } 
+}
+
+let cat5 = new Cat5('Tom')
