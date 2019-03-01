@@ -362,3 +362,17 @@ class Cat5 extends Animal5 {
 }
 
 let cat5 = new Cat5('Tom')
+
+// 类的类型
+class Animal6 {
+  name:string = ''
+  constructor(name:string) {
+    this.name = name
+  }
+  sayHi():string {
+    return `My name is ${this.name}`
+  }
+}
+
+let A:Animal6 = new Animal6('Jack')
+console.log(A.sayHi())
