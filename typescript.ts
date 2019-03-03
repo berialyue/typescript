@@ -376,3 +376,35 @@ class Animal6 {
 
 let A:Animal6 = new Animal6('Jack')
 console.log(A.sayHi())
+
+// 类实现接口
+interface Alarm {
+  alert():any
+}
+
+interface Light {
+  lightOn():any
+  lightOff():any
+}
+
+class Door {
+
+} 
+
+class SecurityDoor extends Door implements Alarm {
+  alert() {
+    console.log('SecurityDoor Alert')
+  }
+}
+
+class Car implements Alarm {
+  alert() {
+    console.log('Car Alert')
+  }
+  lightOn() {
+    console.log('Car light on')
+  }
+  lightOff() {
+    console.log('Car light off')
+  }
+}
