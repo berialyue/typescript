@@ -397,7 +397,7 @@ class SecurityDoor extends Door implements Alarm {
   }
 }
 
-class Car implements Alarm {
+class Car implements Alarm, Light {
   alert() {
     console.log('Car Alert')
   }
@@ -407,4 +407,10 @@ class Car implements Alarm {
   lightOff() {
     console.log('Car light off')
   }
+}
+
+// 接口继承接口
+interface LightableAlarm extends Alarm {
+  lightOn():any
+  lightOff():any
 }
