@@ -414,3 +414,19 @@ interface LightableAlarm extends Alarm {
   lightOn():any
   lightOff():any
 }
+
+// 接口继承类
+class Point {
+  x:number = 0
+  y:number = 0
+}
+
+interface Point3d extends Point {
+  z:number
+}
+
+let point3d: Point3d = {
+  x: 1,
+  y: 2,
+  z: 3
+}
