@@ -430,3 +430,31 @@ let point3d: Point3d = {
   y: 2,
   z: 3
 }
+
+// 混合类型
+interface SearchFunc {
+  (source:string, subString:string):boolean
+}
+
+let mySearch1:SearchFunc
+mySearch1 = function(source:string,subString:string) {
+  return source.search(subString) !== -1
+}
+
+interface Counter {
+  (start:number):string
+  interval:number
+  reset():void
+}
+
+function getCounter():Counter {
+  let counter = <Counter>function (start:number) {}
+  counter.interval = 123
+  counter.reset = function() {}
+  return counter
+}
+
+let cc = getCounter()
+cc(10)
+cc.reset()
+cc.interval = 5.0
