@@ -458,3 +458,14 @@ let cc = getCounter()
 cc(10)
 cc.reset()
 cc.interval = 5.0
+
+// 泛型
+function createArray<T>(length:number,value:T):Array<T> {
+  let result:T[] = []
+  for(let i = 0; i < length; i++) {
+    result[i] = value
+  }
+  return result
+}
+
+createArray<string>(3, 'x')
