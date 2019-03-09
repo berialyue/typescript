@@ -469,3 +469,10 @@ function createArray<T>(length:number,value:T):Array<T> {
 }
 
 createArray<string>(3, 'x')
+
+// 多个类型参数
+function swap<T, U>(tuple:[T, U]):[U, T] {
+  return [tuple[1], tuple[0]]
+}
+
+swap([7, 'seven'])
