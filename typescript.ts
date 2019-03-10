@@ -476,3 +476,30 @@ function swap<T, U>(tuple:[T, U]):[U, T] {
 }
 
 swap([7, 'seven'])
+
+// 泛型约束
+interface Lengthwise {
+  length:number
+}
+
+function loggingIdentity<T extends Lengthwise>(arg:T):T {
+  console.log(arg.length)
+  return arg
+}
+
+// 只能传入具有length属性的参数
+// 传入7会报错，传入lengs就不会
+// loggingIdentity(7) 
+loggingIdentity('lengs')
+
+// 多个类型之间也可以互相约束
+function copyFields<T extends U, U>(target:T, source:U):T {
+  for(let id in source) {
+    target[id] = (<T>source)[id]
+  }
+  return target
+}
+
+let x = {a:1, b:2, c:3, d:4}
+
+copyFields(x, {b:10, d:20})
