@@ -503,3 +503,30 @@ function copyFields<T extends U, U>(target:T, source:U):T {
 let x = {a:1, b:2, c:3, d:4}
 
 copyFields(x, {b:10, d:20})
+
+// 泛型接口
+interface SearchFunc {
+  (source:string, subString:string):boolean
+}
+
+let mySearch2:SearchFunc
+
+mySearch2 = function(source:string, subString:string) {
+  return source.search(subString) !== -1
+}
+
+interface CreateArrayFunc<T> {
+  (length:number, value:T):Array<T>
+}
+
+let createArray1:CreateArrayFunc<any>
+createArray1 = function<T>(length:number, value:T):Array<T> {
+  let result:T[] = []
+  for(let i = 0; i < length; i++) {
+    result[i] = value
+  }
+  return result
+}
+
+createArray1(3,'x')
+
