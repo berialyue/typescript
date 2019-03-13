@@ -532,13 +532,21 @@ createArray1(3,'x')
 
 //泛型类
 class GenericNumber<T> {
-  zeroValue:T
-  add:(x:T,y:T) => T
+  zeroValue:T | undefined
+  add:((x: T, y: T) => T) | undefined
 }
 
 let myGenericNumber = new GenericNumber<number>()
 myGenericNumber.zeroValue = 0
 myGenericNumber.add = function(x,y) { return x + y }
 
+// 泛型参数的默认类型
 
+function createArray2<T = string>(length:number, value:T):Array<T> {
+  let result:T[] = []
+  for(let i = 0; i < length; i++) {
+    result[i] = value
+  }
+  return result
+}
 
