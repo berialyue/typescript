@@ -550,3 +550,14 @@ function createArray2<T = string>(length:number, value:T):Array<T> {
   return result
 }
 
+// 声明合并
+// 函数的合并
+function reverse1(x: number):number
+function reverse1(x: string):string
+function reverse1(x: number | string):number | string | undefined {
+  if (typeof x === 'number') {
+    return Number(x.toString().split('').reverse().join(''))
+  } else if(typeof x === 'string') {
+    return x.split('').reverse().join('')
+  }
+}
