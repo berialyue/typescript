@@ -561,3 +561,19 @@ function reverse1(x: number | string):number | string | undefined {
     return x.split('').reverse().join('')
   }
 }
+
+// 接口的合并
+interface Alarm1 {
+  price:number
+  alert(s:string):string
+}
+
+interface Alarm1 {
+  weight:number
+  alert(s:string,n:number):string
+}
+
+interface Alarm1 {
+  // price: string   类型不一致，报错
+  weight:number
+}
