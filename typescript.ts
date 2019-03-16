@@ -577,3 +577,21 @@ interface Alarm1 {
   // price: string   类型不一致，报错
   weight:number
 }
+
+// 接口中方法的合并
+interface Alarm {
+  price: number;
+  alert(s: string): string;
+}
+interface Alarm {
+  weight: number;
+  alert(s: string, n: number): string;
+}
+
+// 以上接口相当于
+interface Alarm {
+  price: number;
+  weight: number;
+  alert(s: string): string;
+  alert(s: string, n: number): string;
+}
