@@ -579,17 +579,17 @@ interface Alarm1 {
 }
 
 // 接口中方法的合并
-interface Alarm {
+interface Alarm2 {
   price: number;
   alert(s: string): string;
 }
-interface Alarm {
+interface Alarm2 {
   weight: number;
   alert(s: string, n: number): string;
 }
 
 // 以上接口相当于
-interface Alarm {
+interface Alarm2 {
   price: number;
   weight: number;
   alert(s: string): string;
