@@ -261,6 +261,13 @@ console.log(Days["Mon"] === 1); // true
 console.log(Days["Tue"] === 2); // true
 console.log(Days["Sat"] === 6); // true
 
+enum Direction {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT",
+}
+
 // 类
 class Animal {
   name = 'Jack'
